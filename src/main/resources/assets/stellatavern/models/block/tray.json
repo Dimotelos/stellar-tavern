@@ -1,9 +1,9 @@
 {
-    "box": {
+	"credit": "Made with Blockbench",
+	"box": {
         "Position": [0.5, 0, 0.5],
         "Size": [15, 2, 15]
     },
-	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "block/oak_log_top",
 		"1": "block/oak_log",
@@ -92,7 +92,8 @@
 			"translation": [0.75, 6.5, -4.75]
 		},
 		"ground": {
-			"translation": [0, 3.75, 0]
+			"translation": [0, 2.25, 0],
+			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {
 			"rotation": [21, 45, 0],
