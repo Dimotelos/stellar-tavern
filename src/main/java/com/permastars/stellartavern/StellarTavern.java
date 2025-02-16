@@ -29,65 +29,84 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
+// 这里的值应与 META-INF/mods.toml 文件中的条目匹配
 @Mod(StellarTavern.MODID)
 public class StellarTavern
 {
-    // Define mod id in a common place for everything to reference
+    // 在一个公共地方定义 mod id，以便所有内容都可以引用
     public static final String MODID = "stellartavern";
-    // Directly reference a slf4j logger
+    // 直接引用一个 slf4j 日志记录器
     private static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
+    // 创建一个延迟注册器来保存方块，这些方块将在 "stellartavern" 命名空间下注册
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
-    // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
+    // 创建一个延迟注册器来保存物品，这些物品将在 "stellartavern" 命名空间下注册
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
+    // 创建一个延迟注册器来保存创造模式标签页，这些标签页将在 "stellartavern" 命名空间下注册
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
-    public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
-    // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
-    public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
+    // 创建一个新的方块，id 为 "stellartavern:example_block"，结合命名空间和路径
+    public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register(
+        "example_block", () -> new Block(
+            BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+        ));
+    // 创建一个新的方块物品，id 为 "stellartavern:example_block"，结合命名空间和路径
+    public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register(
+        "example_block", () -> new BlockItem(
+            EXAMPLE_BLOCK.get(), new Item.Properties()
+        ));
 
-    // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
-    public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEat().nutrition(1).saturationMod(2f).build())));
+    // 创建一个新的食物物品，id 为 "stellartavern:example_id"，营养值为 1，饱和度为 2
+    public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register(
+        "example_item", () -> new Item(
+            new Item.Properties().food(
+                new FoodProperties.Builder()
+                    .alwaysEat()
+                    .nutrition(1)
+                    .saturationMod(2f)
+                    .build()
+            )
+        )
+    );
 
-    // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
-    public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
+    // 为示例物品创建一个创造模式标签页，id 为 "stellartavern:example_tab"，放置在战斗标签页之后
+    public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register(
+        "example_tab",
+        () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
-            }).build());
+                output.accept(EXAMPLE_ITEM.get()); // 将示例物品添加到标签页。对于你自己的标签页，推荐使用此方法而不是事件
+            })
+            .build()
+    );
 
     public StellarTavern()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Register the commonSetup method for modloading
+        // 注册 commonSetup 方法以进行 mod 加载
         modEventBus.addListener(this::commonSetup);
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
+        // 将延迟注册器注册到 mod 事件总线，以便注册方块
         BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
+        // 将延迟注册器注册到 mod 事件总线，以便注册物品
         ITEMS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
+        // 将延迟注册器注册到 mod 事件总线，以便注册标签页
         CREATIVE_MODE_TABS.register(modEventBus);
 
-        // Register ourselves for server and other game events we are interested in
+        // 注册我们自己以接收服务器和其他游戏事件
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
+        // 将物品注册到创造模式标签页
         modEventBus.addListener(this::addCreative);
 
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
+        // 注册我们的 mod 的 ForgeConfigSpec，以便 Forge 可以为我们创建和加载配置文件
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        // Some common setup code
+        // 一些通用的设置代码
         LOGGER.info("HELLO FROM COMMON SETUP");
 
         if (Config.logDirtBlock)
@@ -98,29 +117,29 @@ public class StellarTavern
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
-    // Add the example block item to the building blocks tab
+    // 将示例方块物品添加到建筑方块标签页
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
             event.accept(EXAMPLE_BLOCK_ITEM);
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
+    // 你可以使用 SubscribeEvent 并让事件总线发现要调用的方法
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
-        // Do something when the server starts
+        // 在服务器启动时执行某些操作
         LOGGER.info("HELLO from server starting");
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    // 你可以使用 EventBusSubscriber 自动注册类中所有带有 @SubscribeEvent 注解的静态方法
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            // Some client setup code
+            // 一些客户端设置代码
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
