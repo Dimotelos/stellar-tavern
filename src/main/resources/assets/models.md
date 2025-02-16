@@ -5,6 +5,7 @@ StartupEvents.registry('item', event => {
         {id: "taellartavern:account_book", name: "账簿"},
         {id: "taellartavern:aurora_core", name: "奥罗拉核心"},
         {id: "taellartavern:aurora_gem", name: "奥罗拉宝石"},
+        {id: "taellartavern:aurora_gem_light", name: "辉光奥罗拉宝石"},
     ].forEach(item => {
         event.create(item.id).displayName(item.name)
     })
