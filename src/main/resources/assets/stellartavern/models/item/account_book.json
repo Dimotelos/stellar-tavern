@@ -175,14 +175,14 @@
 			"scale": [0.7, 0.7, 0.7]
 		},
 		"firstperson_righthand": {
-			"rotation": [-9, -15, 0],
-			"translation": [-0.75, 4.25, 0.25],
-			"scale": [0.7, 0.7, 0.7]
+			"rotation": [-9, -9, 0],
+			"translation": [0.25, 3.75, 1.25],
+			"scale": [0.5, 0.5, 0.5]
 		},
 		"firstperson_lefthand": {
-			"rotation": [-9, -15, 0],
-			"translation": [-0.75, 4.25, 0.25],
-			"scale": [0.7, 0.7, 0.7]
+			"rotation": [-9, -9, 0],
+			"translation": [0.25, 3.75, 1.25],
+			"scale": [0.5, 0.5, 0.5]
 		},
 		"ground": {
 			"translation": [0, 3, 0],
@@ -222,5 +222,5 @@
 			]
 		}
 	],
-    "author": "LDxiaodi"
+	"author": "LDxiaodi"
 }
