@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "book_top",
-		"particle": "book_top"
+		"0": "stellartavern:item/book_top",
+		"particle": "stellartavern:item/book_top"
 	},
 	"elements": [
 		{
@@ -221,5 +221,6 @@
 				11
 			]
 		}
-	]
+	],
+    "author": "LDxiaodi"
 }
