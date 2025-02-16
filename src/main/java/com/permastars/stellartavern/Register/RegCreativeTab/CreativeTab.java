@@ -9,12 +9,10 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static com.permastars.stellartavern.StellarTavern.modid;
 
-import static com.permastars.stellartavern.Register.RegBlock.DecorativeBlock.example_block2;
-import static com.permastars.stellartavern.Register.RegBlock.FunctionBlock.example_block;
-import static com.permastars.stellartavern.Register.RegItem.DecorativeBlockItem.example_block_item2;
-import static com.permastars.stellartavern.Register.RegItem.FunctionBlockItem.example_block_item;
-import static com.permastars.stellartavern.Register.RegItem.DecorativeItem.example_item2;
-import static com.permastars.stellartavern.Register.RegItem.FunctionItem.example_item;
+import static com.permastars.stellartavern.Register.RegItem.DecorativeBlockItem.*;
+import static com.permastars.stellartavern.Register.RegItem.FunctionBlockItem.*;
+import static com.permastars.stellartavern.Register.RegItem.DecorativeItem.*;
+import static com.permastars.stellartavern.Register.RegItem.FunctionItem.*;
 
 
 public class CreativeTab {
@@ -24,14 +22,25 @@ public class CreativeTab {
         "example_tab",
         () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> example_item.get().getDefaultInstance())
+            .icon(() -> accountBook.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(example_block.get());
-                output.accept(example_block2.get());
-                output.accept(example_block_item.get());
-                output.accept(example_block_item2.get());
-                output.accept(example_item.get());
-                output.accept(example_item2.get());
+                output.accept(foodPassTableItem.get());
+                output.accept(dishwashingItem.get());
+                output.accept(starscarDishwashingItem.get());
+                output.accept(cashierItem.get());
+                output.accept(open_signItem.get());
+                output.accept(trayItem.get());
+                output.accept(barStoolItem.get());
+                output.accept(barChairItem.get());
+                output.accept(pubStoolItem.get());
+                output.accept(pubChairItem.get());
+                output.accept(sofaItem.get());
+                output.accept(counterTableItem.get());
+                output.accept(faucetItem.get());
+                output.accept(accountBook.get());
+                output.accept(menu.get());
+                output.accept(auroraGem.get());
+                output.accept(auroraCore.get());
             })
             .build()
     );
