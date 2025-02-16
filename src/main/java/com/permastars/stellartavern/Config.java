@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 // 一个示例配置类。这不是必需的，但最好有一个来保持配置的有序性。
 // 演示如何使用Forge的配置API
-@Mod.EventBusSubscriber(modid = StellarTavern.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = StellarTavern.modid, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Config
 {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
