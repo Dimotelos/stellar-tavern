@@ -24,3 +24,6 @@ runs
 run-data
 
 repo
+
+# 用于模型贴图识别
+src/main/resources/assets/minecraft

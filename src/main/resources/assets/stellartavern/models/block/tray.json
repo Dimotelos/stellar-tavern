@@ -1,80 +1,80 @@
 {
-    "credit": "Made with Blockbench",
-    "author": "LDxiaodi",
-    "parent": "block/block",
-    "box": {
-        "Position": [0.5, 0, 0.5],
-        "Size": [15, 2, 15]
-    },
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
 	"textures": {
-		"0": "block/oak_log_top",
-		"1": "block/oak_log",
+		"log_top": "block/oak_log_top",
+		"log": "block/oak_log",
 		"particle": "block/oak_log_top"
 	},
 	"elements": [
 		{
+			"name": "托盘底",
 			"from": [1, 0, 1],
 			"to": [15, 1, 15],
 			"rotation": {"angle": 0, "axis": "y", "origin": [13, 0, 6]},
 			"faces": {
-				"north": {"uv": [0, 0, 16, 1], "texture": "#1"},
-				"east": {"uv": [0, 0, 16, 1], "texture": "#1"},
-				"south": {"uv": [0, 0, 16, 1], "texture": "#1"},
-				"west": {"uv": [0, 0, 16, 1], "texture": "#1"},
-				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#1"}
+				"north": {"uv": [0, 0, 16, 1], "texture": "#log"},
+				"east": {"uv": [0, 0, 16, 1], "texture": "#log"},
+				"south": {"uv": [0, 0, 16, 1], "texture": "#log"},
+				"west": {"uv": [0, 0, 16, 1], "texture": "#log"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#log_top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#log"}
 			}
 		},
 		{
+			"name": "西边",
 			"from": [0.5, 1, 1],
 			"to": [1, 2, 15],
 			"rotation": {"angle": 0, "axis": "y", "origin": [1, 1, 15]},
 			"faces": {
-				"north": {"uv": [0, 0, 1, 1], "texture": "#0"},
-				"east": {"uv": [1, 0, 15, 1], "texture": "#0"},
-				"south": {"uv": [0, 0, 1, 1], "texture": "#0"},
-				"west": {"uv": [1, 0, 15, 1], "texture": "#0"},
-				"up": {"uv": [0, 1, 1, 15], "rotation": 180, "texture": "#0"},
-				"down": {"uv": [15, 1, 16, 15], "rotation": 180, "texture": "#0"}
+				"north": {"uv": [0, 0, 1, 1], "texture": "#log_top"},
+				"east": {"uv": [1, 0, 15, 1], "texture": "#log_top"},
+				"south": {"uv": [0, 0, 1, 1], "texture": "#log_top"},
+				"west": {"uv": [1, 0, 15, 1], "texture": "#log_top"},
+				"up": {"uv": [0, 1, 1, 15], "rotation": 180, "texture": "#log_top"},
+				"down": {"uv": [15, 1, 16, 15], "rotation": 180, "texture": "#log_top"}
 			}
 		},
 		{
+			"name": "东边",
 			"from": [15, 1, 1],
 			"to": [15.5, 2, 15],
 			"rotation": {"angle": 0, "axis": "y", "origin": [15, 1, 1]},
 			"faces": {
 				"north": {"uv": [0, 0, 1, 1], "texture": "#missing"},
-				"east": {"uv": [0, 0, 14, 1], "texture": "#0"},
+				"east": {"uv": [0, 0, 14, 1], "texture": "#log_top"},
 				"south": {"uv": [0, 0, 1, 1], "texture": "#missing"},
-				"west": {"uv": [0, 0, 14, 1], "texture": "#0"},
-				"up": {"uv": [0, 1, 1, 15], "texture": "#0"},
-				"down": {"uv": [0, 1, 1, 15], "texture": "#0"}
+				"west": {"uv": [0, 0, 14, 1], "texture": "#log_top"},
+				"up": {"uv": [0, 1, 1, 15], "texture": "#log_top"},
+				"down": {"uv": [0, 1, 1, 15], "texture": "#log_top"}
 			}
 		},
 		{
+			"name": "南边",
 			"from": [0.5, 1, 15],
 			"to": [15.5, 2, 15.5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [16.5, 1, 15]},
 			"faces": {
-				"north": {"uv": [0, 0, 15, 1], "texture": "#0"},
-				"east": {"uv": [0, 0, 0.5, 1], "texture": "#0"},
-				"south": {"uv": [0, 0, 15, 1], "texture": "#0"},
-				"west": {"uv": [0, 0, 0.5, 1], "texture": "#0"},
-				"up": {"uv": [0, 0, 0.5, 15], "rotation": 90, "texture": "#0"},
-				"down": {"uv": [0, 0, 0.5, 15], "rotation": 270, "texture": "#0"}
+				"north": {"uv": [0, 0, 15, 1], "texture": "#log_top"},
+				"east": {"uv": [0, 0, 0.5, 1], "texture": "#log_top"},
+				"south": {"uv": [0, 0, 15, 1], "texture": "#log_top"},
+				"west": {"uv": [0, 0, 0.5, 1], "texture": "#log_top"},
+				"up": {"uv": [0, 0, 0.5, 15], "rotation": 90, "texture": "#log_top"},
+				"down": {"uv": [0, 0, 0.5, 15], "rotation": 270, "texture": "#log_top"}
 			}
 		},
 		{
+			"name": "北边",
 			"from": [0.5, 1, 0.5],
 			"to": [15.5, 2, 1],
 			"rotation": {"angle": 0, "axis": "y", "origin": [16.5, 1, 0]},
 			"faces": {
-				"north": {"uv": [0, 0, 16, 1], "texture": "#0"},
-				"east": {"uv": [0, 0, 1, 1], "texture": "#0"},
-				"south": {"uv": [0, 0, 16, 1], "texture": "#0"},
-				"west": {"uv": [0, 0, 1, 1], "texture": "#0"},
-				"up": {"uv": [0, 0, 1, 16], "rotation": 90, "texture": "#0"},
-				"down": {"uv": [0, 0, 1, 16], "rotation": 270, "texture": "#0"}
+				"north": {"uv": [0, 0, 16, 1], "texture": "#log_top"},
+				"east": {"uv": [0, 0, 1, 1], "texture": "#log_top"},
+				"south": {"uv": [0, 0, 16, 1], "texture": "#log_top"},
+				"west": {"uv": [0, 0, 1, 1], "texture": "#log_top"},
+				"up": {"uv": [0, 0, 1, 16], "rotation": 90, "texture": "#log_top"},
+				"down": {"uv": [0, 0, 1, 16], "rotation": 270, "texture": "#log_top"}
 			}
 		}
 	],
@@ -104,5 +104,19 @@
 		"head": {
 			"translation": [0, 14.25, 0]
 		}
+	},
+	"groups": [
+		0,
+		{
+			"name": "托盘边",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [1, 2, 3, 4]
+		}
+	],
+	"author": "LDxiaodi",
+	"box": {
+		"Position": [0.5, 0, 0.5],
+		"Size": [15, 2, 15]
 	}
 }
