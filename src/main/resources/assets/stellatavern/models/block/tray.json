@@ -1,6 +1,8 @@
 {
-	"credit": "Made with Blockbench",
-	"box": {
+    "credit": "Made with Blockbench",
+    "author": "LDxiaodi",
+    "parent": "block/block",
+    "box": {
         "Position": [0.5, 0, 0.5],
         "Size": [15, 2, 15]
     },
@@ -92,8 +94,7 @@
 			"translation": [0.75, 6.5, -4.75]
 		},
 		"ground": {
-			"translation": [0, 2.25, 0],
-			"scale": [0.5, 0.5, 0.5]
+			"translation": [0, 3.75, 0]
 		},
 		"gui": {
 			"rotation": [21, 45, 0],

@@ -1,5 +1,7 @@
 {
 	"credit": "Made with Blockbench",
+    "author": "LDxiaodi",
+    "parent": "block/block",
 	"textures": {
 		"0": "block/oak_log",
 		"1": "block/oak_log_top",
@@ -89,12 +91,6 @@
 		}
 	],
 	"display": {
-		"thirdperson_righthand": {
-			"translation": [0, -1.75, 0]
-		},
-		"thirdperson_lefthand": {
-			"translation": [0, -1.75, 0]
-		},
 		"firstperson_righthand": {
 			"translation": [0, -0.25, 0],
 			"scale": [0.75, 0.75, 0.75]
@@ -102,15 +98,6 @@
 		"firstperson_lefthand": {
 			"translation": [0, -0.5, 0],
 			"scale": [0.75, 0.75, 0.75]
-		},
-		"ground": {
-			"translation": [0, 1.5, 0],
-			"scale": [0.5, 0.5, 0.5]
-		},
-		"gui": {
-			"rotation": [19, 45, 0],
-			"translation": [0, -1, 0],
-			"scale": [0.65, 0.65, 0.65]
 		},
 		"head": {
 			"rotation": [0, 0, 180],
