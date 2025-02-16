@@ -1,4 +1,4 @@
-![A LOGO image of Stellar Tavern](sources\logo_without_bg.png)
+![A LOGO image of Stellar Tavern](sources/logo_without_bg.png)
 
 ## Stellar Tavern
 
