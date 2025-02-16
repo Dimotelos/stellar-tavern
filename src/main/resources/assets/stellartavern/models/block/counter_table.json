@@ -1,0 +1,122 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"log": "block/oak_log",
+		"log_top": "block/oak_log_top",
+		"stripped_log": "block/stripped_oak_log",
+		"planks": "block/oak_planks",
+		"stripped_log_top": "block/stripped_oak_log_top",
+		"particle": "block/oak_log"
+	},
+	"elements": [
+		{
+			"name": "桌面",
+			"from": [0, 15, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 15, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 1], "texture": "#stripped_log"},
+				"east": {"uv": [0, 0, 16, 1], "texture": "#stripped_log"},
+				"south": {"uv": [0, 0, 16, 1], "texture": "#stripped_log"},
+				"west": {"uv": [0, 0, 16, 1], "texture": "#stripped_log"},
+				"up": {"uv": [0, 1, 16, 15], "texture": "#planks"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#stripped_log_top"}
+			}
+		},
+		{
+			"name": "上1",
+			"from": [5, 13.5, 5],
+			"to": [11, 15, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 13.5, 5]},
+			"faces": {
+				"north": {"uv": [0, 0, 6, 1.5], "texture": "#log"},
+				"east": {"uv": [0, 0, 6, 1.5], "texture": "#log"},
+				"south": {"uv": [0, 0, 6, 1.5], "texture": "#log"},
+				"west": {"uv": [0, 0, 6, 1.5], "texture": "#log"},
+				"up": {"uv": [0, 0, 6, 6], "texture": "#missing"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#log"}
+			}
+		},
+		{
+			"name": "上2",
+			"from": [6, 11.25, 6],
+			"to": [10, 13.75, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 11.25, 6]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 9], "texture": "#log"},
+				"east": {"uv": [0, 0, 16, 9], "texture": "#log"},
+				"south": {"uv": [0, 0, 16, 9], "texture": "#log"},
+				"west": {"uv": [0, 0, 16, 9], "texture": "#log"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#stripped_log_top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#log_top"}
+			}
+		},
+		{
+			"name": "桌腿柱子",
+			"from": [7, 4, 7],
+			"to": [9, 13.5, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 4, 7]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 9.5], "texture": "#stripped_log"},
+				"east": {"uv": [0, 0, 4, 9.5], "texture": "#stripped_log"},
+				"south": {"uv": [0, 0, 4, 9.5], "texture": "#stripped_log"},
+				"west": {"uv": [0, 0, 4, 9.5], "texture": "#stripped_log"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#stripped_log_top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#stripped_log_top"}
+			}
+		},
+		{
+			"name": "下2",
+			"from": [6, 1, 6],
+			"to": [10, 4.5, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 1, 6]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8.5], "texture": "#log"},
+				"east": {"uv": [0, 0, 16, 9.5], "texture": "#log"},
+				"south": {"uv": [0, 0, 16, 8.5], "texture": "#log"},
+				"west": {"uv": [0, 0, 16, 8.5], "texture": "#log"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#log_top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#log"}
+			}
+		},
+		{
+			"name": "下1",
+			"from": [5, 0, 5],
+			"to": [11, 1.25, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 0, 5]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 1.25], "texture": "#log"},
+				"east": {"uv": [0, 14.75, 16, 16], "texture": "#log"},
+				"south": {"uv": [0, 14.75, 16, 16], "texture": "#log"},
+				"west": {"uv": [0, 14.75, 16, 16], "texture": "#log"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#log"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#log_top"}
+			}
+		}
+	],
+	"display": {
+		"firstperson_righthand": {
+			"translation": [0, -0.25, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, -0.5, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"head": {
+			"rotation": [0, 0, 180],
+			"translation": [0, 14.25, 0]
+		}
+	},
+	"groups": [
+		0,
+		{
+			"name": "桌腿",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [1, 2, 3, 4, 5]
+		}
+	],
+	"author": "LDxiaodi"
+}
