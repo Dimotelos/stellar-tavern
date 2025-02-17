@@ -19,7 +19,7 @@ public class FunctionBlock {
     public static final RegistryObject<Block> dishwashing = blockRegister.register("dishwashing", () -> new Block(BlockBehaviour.Properties.of()));
     public static final RegistryObject<Block> starscarDishwashing = blockRegister.register("starscar_dishwashing", () -> new Block(BlockBehaviour.Properties.of()));
     public static final RegistryObject<Block> cashier = blockRegister.register("cashier", () -> new Block(BlockBehaviour.Properties.of()));
-    public static final RegistryObject<Block> open_sign = blockRegister.register("open_sign", () -> new Block(BlockBehaviour.Properties.of()));
+    public static final RegistryObject<Block> openSign = blockRegister.register("open_sign", () -> new Block(BlockBehaviour.Properties.of()));
     public static final RegistryObject<Block> tray = blockRegister.register("tray", () -> new Block(BlockBehaviour.Properties.of()));
 
     // 注册新方块

@@ -1,6 +1,7 @@
 package com.permastars.stellartavern.Register.RegCreativeTab;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,17 +19,18 @@ import static com.permastars.stellartavern.Register.RegItem.FunctionItem.*;
 public class CreativeTab {
     public static final DeferredRegister<CreativeModeTab> creativeTabRegister = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, modid);
 
-    public static final RegistryObject<CreativeModeTab> example_tab = creativeTabRegister.register(
-        "example_tab",
+    public static final RegistryObject<CreativeModeTab> stellarTab = creativeTabRegister.register(
+        "stellar_tab",
         () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
+            .title(Component.translatable("creativetab.stellar_tab"))
             .icon(() -> accountBook.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(foodPassTableItem.get());
                 output.accept(dishwashingItem.get());
                 output.accept(starscarDishwashingItem.get());
                 output.accept(cashierItem.get());
-                output.accept(open_signItem.get());
+                output.accept(openSignItem.get());
                 output.accept(trayItem.get());
                 output.accept(barStoolItem.get());
                 output.accept(barChairItem.get());

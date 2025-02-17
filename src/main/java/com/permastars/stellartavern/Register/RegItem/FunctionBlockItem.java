@@ -2,8 +2,6 @@ package com.permastars.stellartavern.Register.RegItem;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,7 +20,7 @@ public class FunctionBlockItem {
     public static final RegistryObject<Item> dishwashingItem = itemRegister.register("dishwashing", () -> new BlockItem(dishwashing.get(), new Item.Properties()));
     public static final RegistryObject<Item> starscarDishwashingItem = itemRegister.register("starscar_dishwashing", () -> new BlockItem(starscarDishwashing.get(), new Item.Properties()));
     public static final RegistryObject<Item> cashierItem = itemRegister.register("cashier", () -> new BlockItem(cashier.get(), new Item.Properties()));
-    public static final RegistryObject<Item> open_signItem = itemRegister.register("open_sign", () -> new BlockItem(open_sign.get(), new Item.Properties()));
+    public static final RegistryObject<Item> openSignItem = itemRegister.register("open_sign", () -> new BlockItem(openSign.get(), new Item.Properties()));
     public static final RegistryObject<Item> trayItem = itemRegister.register("tray", () -> new BlockItem(tray.get(), new Item.Properties()));
 
     // 注册新物品
