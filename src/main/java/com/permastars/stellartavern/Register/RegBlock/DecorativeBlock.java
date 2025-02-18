@@ -23,9 +23,9 @@ public class DecorativeBlock {
     public static final RegistryObject<Block> counterTable = blockRegister.register("counter_table", () -> new Block(BlockBehaviour.Properties.of()));
     public static final RegistryObject<Block> faucet = blockRegister.register("faucet", () -> new Block(BlockBehaviour.Properties.of()));
 
+    public static final RegistryObject<Block> auroraOre = blockRegister.register("aurora_ore", () -> new Block(BlockBehaviour.Properties.of()));
+    public static final RegistryObject<Block> deepslateAuroraOre = blockRegister.register("aurora_deep_ore", () -> new Block(BlockBehaviour.Properties.of()));
 
     // 注册新方块
-    public static void register(IEventBus eventBus) {
-        blockRegister.register(eventBus);
-    };
+    public static void register(IEventBus eventBus) { blockRegister.register(eventBus); };
 }

@@ -43,11 +43,11 @@ public class CreativeTab {
                 output.accept(menu.get());
                 output.accept(auroraGem.get());
                 output.accept(auroraCore.get());
+                output.accept(auroraOreItem.get());
+                output.accept(deepslateAuroraOreItem.get());
             })
             .build()
     );
 
-    public static void register(IEventBus eventBus) {
-        creativeTabRegister.register(eventBus);
-    }
+    public static void register(IEventBus eventBus) { creativeTabRegister.register(eventBus); }
 }

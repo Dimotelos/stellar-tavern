@@ -24,7 +24,5 @@ public class FunctionBlockItem {
     public static final RegistryObject<Item> trayItem = itemRegister.register("tray", () -> new BlockItem(tray.get(), new Item.Properties()));
 
     // 注册新物品
-    public static void register(IEventBus eventBus) {
-        itemRegister.register(eventBus);
-    };
+    public static void register(IEventBus eventBus) { itemRegister.register(eventBus); };
 }

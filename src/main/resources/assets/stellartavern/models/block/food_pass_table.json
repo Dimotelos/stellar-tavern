@@ -162,33 +162,40 @@
 		}
 	},
 	"groups": [
-		0,
 		{
-			"name": "毛巾架",
-			"origin": [6.75, 11.25, 13.5],
-			"color": 0,
-			"children": [1, 2]
-		},
-		{
-			"name": "订单纸",
-			"origin": [3, 7.75, 13.75],
-			"color": 0,
-			"children": [3, 4]
-		},
-		5,
-		{
-			"name": "桌面",
-			"origin": [-0.25, 13.25, -0.25],
+			"name": "VoxelShapes",
+			"origin": [8, 8, 8],
 			"color": 0,
 			"children": [
+				0,
 				{
-					"name": "置物架",
-					"origin": [9.1875, 8.375, 7.79849],
+					"name": "毛巾架",
+					"origin": [6.75, 11.25, 13.5],
 					"color": 0,
-					"children": [6, 7]
+					"children": [1, 2]
 				},
-				8,
-				9
+				{
+					"name": "订单纸",
+					"origin": [3, 7.75, 13.75],
+					"color": 0,
+					"children": [3, 4]
+				},
+				5,
+				{
+					"name": "桌面",
+					"origin": [-0.25, 13.25, -0.25],
+					"color": 0,
+					"children": [
+						{
+							"name": "置物架",
+							"origin": [9.1875, 8.375, 7.79849],
+							"color": 0,
+							"children": [6, 7]
+						},
+						8,
+						9
+					]
+				}
 			]
 		}
 	],

@@ -23,9 +23,10 @@ public class DecorativeBlockItem {
     public static final RegistryObject<Item> sofaItem = itemRegister.register("sofa", () -> new BlockItem(sofa.get(), new Item.Properties()));
     public static final RegistryObject<Item> counterTableItem = itemRegister.register("counter_table", () -> new BlockItem(counterTable.get(), new Item.Properties()));
     public static final RegistryObject<Item> faucetItem = itemRegister.register("faucet", () -> new BlockItem(faucet.get(), new Item.Properties()));
-    
+
+    public static final RegistryObject<Item> auroraOreItem = itemRegister.register("aurora_ore", () -> new BlockItem(auroraOre.get(), new Item.Properties()));
+    public static final RegistryObject<Item> deepslateAuroraOreItem = itemRegister.register("deepslate_aurora_ore", () -> new BlockItem(deepslateAuroraOre.get(), new Item.Properties()));
+
     // 注册新物品
-    public static void register(IEventBus eventBus) {
-        itemRegister.register(eventBus);
-    };
+    public static void register(IEventBus eventBus) { itemRegister.register(eventBus); };
 }

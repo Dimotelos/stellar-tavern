@@ -18,7 +18,5 @@ public class DecorativeItem {
     public static final RegistryObject<Item> auroraCore = itemRegister.register("aurora_core", () -> new Item(new Item.Properties()));
 
     // 注册新物品
-    public static void register(IEventBus eventBus) {
-        itemRegister.register(eventBus);
-    };
+    public static void register(IEventBus eventBus) { itemRegister.register(eventBus); };
 }
