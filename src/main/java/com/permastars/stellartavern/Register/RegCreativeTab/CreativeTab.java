@@ -1,6 +1,7 @@
 package com.permastars.stellartavern.Register.RegCreativeTab;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -9,34 +10,43 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static com.permastars.stellartavern.StellarTavern.modid;
 
-import static com.permastars.stellartavern.Register.RegBlock.DecorativeBlock.example_block2;
-import static com.permastars.stellartavern.Register.RegBlock.FunctionBlock.example_block;
-import static com.permastars.stellartavern.Register.RegItem.DecorativeBlockItem.example_block_item2;
-import static com.permastars.stellartavern.Register.RegItem.FunctionBlockItem.example_block_item;
-import static com.permastars.stellartavern.Register.RegItem.DecorativeItem.example_item2;
-import static com.permastars.stellartavern.Register.RegItem.FunctionItem.example_item;
+import static com.permastars.stellartavern.Register.RegItem.DecorativeBlockItem.*;
+import static com.permastars.stellartavern.Register.RegItem.FunctionBlockItem.*;
+import static com.permastars.stellartavern.Register.RegItem.DecorativeItem.*;
+import static com.permastars.stellartavern.Register.RegItem.FunctionItem.*;
 
 
 public class CreativeTab {
     public static final DeferredRegister<CreativeModeTab> creativeTabRegister = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, modid);
 
-    public static final RegistryObject<CreativeModeTab> example_tab = creativeTabRegister.register(
-        "example_tab",
+    public static final RegistryObject<CreativeModeTab> stellarTab = creativeTabRegister.register(
+        "stellar_tab",
         () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> example_item.get().getDefaultInstance())
+            .title(Component.translatable("creativetab.stellar_tab"))
+            .icon(() -> accountBook.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(example_block.get());
-                output.accept(example_block2.get());
-                output.accept(example_block_item.get());
-                output.accept(example_block_item2.get());
-                output.accept(example_item.get());
-                output.accept(example_item2.get());
+                output.accept(foodPassTableItem.get());
+                output.accept(dishwashingItem.get());
+                output.accept(starscarDishwashingItem.get());
+                output.accept(cashierItem.get());
+                output.accept(trayItem.get());
+                output.accept(barStoolItem.get());
+                output.accept(barChairItem.get());
+                output.accept(pubStoolItem.get());
+                output.accept(pubChairItem.get());
+                output.accept(sofaItem.get());
+                output.accept(counterTableItem.get());
+                output.accept(faucetItem.get());
+                output.accept(accountBook.get());
+                output.accept(menu.get());
+                output.accept(auroraGem.get());
+                output.accept(auroraCore.get());
+                output.accept(auroraOreItem.get());
+                output.accept(deepslateAuroraOreItem.get());
             })
             .build()
     );
 
-    public static void register(IEventBus eventBus) {
-        creativeTabRegister.register(eventBus);
-    }
+    public static void register(IEventBus eventBus) { creativeTabRegister.register(eventBus); }
 }
