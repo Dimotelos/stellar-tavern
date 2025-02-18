@@ -1,3 +1,5 @@
+![A LOGO image of Stellar Tavern](sources/logo_without_bg.png)
+
 ## Stellar Tavern
 
 - Minecraft NeoForge 1.20.1 Mod by GoldSheep3 & LDxiaodi
