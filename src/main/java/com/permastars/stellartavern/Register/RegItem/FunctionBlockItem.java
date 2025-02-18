@@ -20,7 +20,6 @@ public class FunctionBlockItem {
     public static final RegistryObject<Item> dishwashingItem = itemRegister.register("dishwashing", () -> new BlockItem(dishwashing.get(), new Item.Properties()));
     public static final RegistryObject<Item> starscarDishwashingItem = itemRegister.register("starscar_dishwashing", () -> new BlockItem(starscarDishwashing.get(), new Item.Properties()));
     public static final RegistryObject<Item> cashierItem = itemRegister.register("cashier", () -> new BlockItem(cashier.get(), new Item.Properties()));
-    public static final RegistryObject<Item> openSignItem = itemRegister.register("open_sign", () -> new BlockItem(openSign.get(), new Item.Properties()));
     public static final RegistryObject<Item> trayItem = itemRegister.register("tray", () -> new BlockItem(tray.get(), new Item.Properties()));
 
     // 注册新物品

@@ -30,7 +30,6 @@ public class CreativeTab {
                 output.accept(dishwashingItem.get());
                 output.accept(starscarDishwashingItem.get());
                 output.accept(cashierItem.get());
-                output.accept(openSignItem.get());
                 output.accept(trayItem.get());
                 output.accept(barStoolItem.get());
                 output.accept(barChairItem.get());

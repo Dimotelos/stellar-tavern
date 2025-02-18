@@ -24,8 +24,6 @@ public class FunctionBlock {
         "starscar_dishwashing", () -> new Block(BlockBehaviour.Properties.of()));
     public static final RegistryObject<Block> cashier = blockRegister.register(
         "cashier", () -> new Block(BlockBehaviour.Properties.of()));
-    public static final RegistryObject<Block> openSign = blockRegister.register(
-        "open_sign", () -> new Block(BlockBehaviour.Properties.of()));
     public static final RegistryObject<Block> tray = blockRegister.register(
         "tray", () -> new Block(BlockBehaviour.Properties.of()));
 
