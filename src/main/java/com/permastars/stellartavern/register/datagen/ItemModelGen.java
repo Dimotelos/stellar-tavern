@@ -1,6 +1,9 @@
 package com.permastars.stellartavern.register.datagen;
 
 import com.permastars.stellartavern.StellarTavern;
+import com.permastars.stellartavern.register.datagen.data.Data;
+import com.permastars.stellartavern.register.datagen.data.ItemInfo;
+import com.permastars.stellartavern.register.datagen.data.ItemRepository;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -13,6 +16,7 @@ import java.util.List;
 import java.util.Objects;
 
 
+import static com.permastars.stellartavern.register.datagen.data.Data.items;
 import static com.permastars.stellartavern.register.item.DecorativeItem.*;
 import static com.permastars.stellartavern.register.item.FunctionItem.*;
 
@@ -25,18 +29,11 @@ public class ItemModelGen extends ItemModelProvider {
         super(output, StellarTavern.modid, helper);
     }
 
-    // Gen: item without models
-    public static List<RegistryObject<Item>> items = List.of(
-        // register.item.DecorativeItem
-        auroraGem,
-        auroraCore,
-        // register.item.FunctionItem
-        menu
-    );
-
     @Override
     protected void registerModels() {
-        items.forEach(this::itemGeneratedModel);
+        for (RegistryObject<Item> item : Data.items.getAllValues(0)) {
+            itemGeneratedModel(item);
+        }
     }
 
     public void itemGeneratedModel(RegistryObject<Item> item) {
