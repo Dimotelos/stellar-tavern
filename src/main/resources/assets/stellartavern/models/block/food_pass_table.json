@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "block/block",
+	"parent": "minecraft:block/block",
 	"textures": {
 		"oak_planks": "block/oak_planks",
 		"wool": "block/white_wool",

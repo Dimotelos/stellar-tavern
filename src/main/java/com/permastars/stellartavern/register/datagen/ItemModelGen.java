@@ -25,15 +25,17 @@ public class ItemModelGen extends ItemModelProvider {
         super(output, StellarTavern.modid, helper);
     }
 
+    // Gen: item without models
+    public static List<RegistryObject<Item>> items = List.of(
+        // register.item.DecorativeItem
+        auroraGem,
+        auroraCore,
+        // register.item.FunctionItem
+        menu
+    );
+
     @Override
     protected void registerModels() {
-        List<RegistryObject<Item>> items = List.of(
-            // RegItem.DecorativeItem
-            auroraGem,
-            auroraCore,
-            // RegItem.FunctionItem
-            menu
-        );
         items.forEach(this::itemGeneratedModel);
     }
 
