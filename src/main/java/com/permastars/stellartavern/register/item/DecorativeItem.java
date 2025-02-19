@@ -1,4 +1,4 @@
-package com.permastars.stellartavern.Register.RegItem;
+package com.permastars.stellartavern.register.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;

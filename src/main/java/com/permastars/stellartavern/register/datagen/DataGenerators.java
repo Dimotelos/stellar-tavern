@@ -1,4 +1,4 @@
-package com.permastars.stellartavern.Register.DataGenerators;
+package com.permastars.stellartavern.register.datagen;
 
 import com.permastars.stellartavern.StellarTavern;
 import net.minecraft.core.HolderLookup;

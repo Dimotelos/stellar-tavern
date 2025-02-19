@@ -1,4 +1,4 @@
-package com.permastars.stellartavern.Register.DataGenerators;
+package com.permastars.stellartavern.register.datagen;
 
 import com.permastars.stellartavern.StellarTavern;
 import net.minecraft.data.PackOutput;
@@ -12,8 +12,8 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.List;
 import java.util.Objects;
 
-import static com.permastars.stellartavern.Register.RegBlock.DecorativeBlock.*;
-import static com.permastars.stellartavern.Register.RegBlock.FunctionBlock.*;
+import static com.permastars.stellartavern.register.block.DecorativeBlock.*;
+import static com.permastars.stellartavern.register.block.FunctionBlock.*;
 
 
 //public class BlockModelGen extends BlockModelProvider {

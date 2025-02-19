@@ -1,4 +1,4 @@
-package com.permastars.stellartavern.Register.RegItem;
+package com.permastars.stellartavern.register.blockitem;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -7,7 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.permastars.stellartavern.Register.RegBlock.FunctionBlock.*;
+import static com.permastars.stellartavern.register.block.FunctionBlock.*;
 import static com.permastars.stellartavern.StellarTavern.modid;
 
 

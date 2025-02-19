@@ -1,6 +1,6 @@
-package com.permastars.stellartavern.Register.RegBlock;
+package com.permastars.stellartavern.register.block;
 
-import com.permastars.stellartavern.Register.RegBlock.Custom.FoodPassTable;
+import com.permastars.stellartavern.register.block.custom.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,15 +17,26 @@ public class FunctionBlock {
 
     // 创建新方块
     public static final RegistryObject<Block> foodPassTable = blockRegister.register(
-        "food_pass_table", () -> new FoodPassTable(BlockBehaviour.Properties.of()));
+        "food_pass_table", () -> new FoodPassTable(
+            BlockBehaviour.Properties.of()
+                .noOcclusion() // 设置为不完整方块渲染以解决底边透视问题
+        ));
     public static final RegistryObject<Block> dishwashing = blockRegister.register(
-        "dishwashing", () -> new Block(BlockBehaviour.Properties.of()));
+        "dishwashing", () -> new Dishwashing(
+            BlockBehaviour.Properties.of()
+        ));
     public static final RegistryObject<Block> starscarDishwashing = blockRegister.register(
-        "starscar_dishwashing", () -> new Block(BlockBehaviour.Properties.of()));
+        "starscar_dishwashing", () -> new StarscarDishwashing(
+            BlockBehaviour.Properties.of()
+        ));
     public static final RegistryObject<Block> cashier = blockRegister.register(
-        "cashier", () -> new Block(BlockBehaviour.Properties.of()));
+        "cashier", () -> new Cashier(
+            BlockBehaviour.Properties.of()
+        ));
     public static final RegistryObject<Block> tray = blockRegister.register(
-        "tray", () -> new Block(BlockBehaviour.Properties.of()));
+        "tray", () -> new Block(
+            BlockBehaviour.Properties.of()
+        ));
 
 //    var a = Stream.of(
 //        Block.box(0, 0, 1.5, 16, 15.5, 16),

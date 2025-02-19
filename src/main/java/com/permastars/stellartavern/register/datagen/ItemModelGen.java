@@ -1,4 +1,4 @@
-package com.permastars.stellartavern.Register.DataGenerators;
+package com.permastars.stellartavern.register.datagen;
 
 import com.permastars.stellartavern.StellarTavern;
 import net.minecraft.data.PackOutput;
@@ -13,10 +13,8 @@ import java.util.List;
 import java.util.Objects;
 
 
-import static com.permastars.stellartavern.Register.RegItem.DecorativeBlockItem.*;
-import static com.permastars.stellartavern.Register.RegItem.FunctionBlockItem.*;
-import static com.permastars.stellartavern.Register.RegItem.DecorativeItem.*;
-import static com.permastars.stellartavern.Register.RegItem.FunctionItem.*;
+import static com.permastars.stellartavern.register.item.DecorativeItem.*;
+import static com.permastars.stellartavern.register.item.FunctionItem.*;
 
 
 public class ItemModelGen extends ItemModelProvider {

@@ -1,4 +1,4 @@
-package com.permastars.stellartavern.Register.RegCreativeTab;
+package com.permastars.stellartavern.register.creativetab;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -10,10 +10,10 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static com.permastars.stellartavern.StellarTavern.modid;
 
-import static com.permastars.stellartavern.Register.RegItem.DecorativeBlockItem.*;
-import static com.permastars.stellartavern.Register.RegItem.FunctionBlockItem.*;
-import static com.permastars.stellartavern.Register.RegItem.DecorativeItem.*;
-import static com.permastars.stellartavern.Register.RegItem.FunctionItem.*;
+import static com.permastars.stellartavern.register.blockitem.DecorativeBlockItem.*;
+import static com.permastars.stellartavern.register.blockitem.FunctionBlockItem.*;
+import static com.permastars.stellartavern.register.item.DecorativeItem.*;
+import static com.permastars.stellartavern.register.item.FunctionItem.*;
 
 
 public class CreativeTab {

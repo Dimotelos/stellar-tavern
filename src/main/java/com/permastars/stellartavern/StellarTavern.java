@@ -1,7 +1,7 @@
 package com.permastars.stellartavern;
 
 import com.mojang.logging.LogUtils;
-import com.permastars.stellartavern.Register.RegCreativeTab.CreativeTab;
+import com.permastars.stellartavern.register.creativetab.CreativeTab;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,12 +13,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
-import com.permastars.stellartavern.Register.RegBlock.FunctionBlock;
-import com.permastars.stellartavern.Register.RegBlock.DecorativeBlock;
-import com.permastars.stellartavern.Register.RegItem.FunctionBlockItem;
-import com.permastars.stellartavern.Register.RegItem.DecorativeBlockItem;
-import com.permastars.stellartavern.Register.RegItem.FunctionItem;
-import com.permastars.stellartavern.Register.RegItem.DecorativeItem;
+import com.permastars.stellartavern.register.block.FunctionBlock;
+import com.permastars.stellartavern.register.block.DecorativeBlock;
+import com.permastars.stellartavern.register.blockitem.FunctionBlockItem;
+import com.permastars.stellartavern.register.blockitem.DecorativeBlockItem;
+import com.permastars.stellartavern.register.item.FunctionItem;
+import com.permastars.stellartavern.register.item.DecorativeItem;
 
 // 这里的值应与 META-INF/mods.toml 文件中的条目匹配
 @Mod(StellarTavern.modid)

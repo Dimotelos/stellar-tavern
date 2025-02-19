@@ -1,4 +1,4 @@
-package com.permastars.stellartavern.Register.RegBlock;
+package com.permastars.stellartavern.register.block;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;

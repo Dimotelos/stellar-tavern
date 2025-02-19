@@ -1,13 +1,6 @@
-package com.permastars.stellartavern.Register.RegBlock.Custom;
+package com.permastars.stellartavern.register.block.custom;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
@@ -16,16 +9,14 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.registries.RegistryObject;
 
 import javax.annotation.Nullable;
 
-public class FoodPassTable extends HorizontalDirectionalBlock {
+public class StarscarDishwashing extends HorizontalDirectionalBlock {
 
     public static final DirectionProperty facing = BlockStateProperties.HORIZONTAL_FACING;
 
-    public FoodPassTable(Properties properties) {
+    public StarscarDishwashing(Properties properties) {
         super(properties);
     }
 
