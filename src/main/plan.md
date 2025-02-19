@@ -2,8 +2,8 @@
 
 ### 构建器内容
 
-- [ ] 国际化文本`zh_cn.json`
-- [ ] 国际化文本`en_us.json`
+- [x] 国际化文本`zh_cn.json`
+- [x] 国际化文本`en_us.json`
 - [ ] 通用`Block`
   - [ ] `models`生成
   - [ ] `blockstates`生成

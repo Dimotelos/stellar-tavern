@@ -31,7 +31,7 @@ public class ItemModelGen extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        for (RegistryObject<Item> item : Data.items.getAllValues(0)) {
+        for (RegistryObject<Item> item : Data.items.getAllValues(1)) {
             itemGeneratedModel(item);
         }
     }

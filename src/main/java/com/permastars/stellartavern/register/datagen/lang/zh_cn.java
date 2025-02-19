@@ -1,6 +1,9 @@
 package com.permastars.stellartavern.register.datagen.lang;
 
 import com.permastars.stellartavern.StellarTavern;
+import com.permastars.stellartavern.register.datagen.data.Data;
+import com.permastars.stellartavern.register.datagen.data.ItemInfo;
+import com.permastars.stellartavern.register.datagen.data.LangInfo;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
@@ -13,6 +16,7 @@ public class zh_cn extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add(auroraGem.get(), "奥罗拉宝石");
+        for (ItemInfo item: Data.items.getAll(0)) { add(item.getValue().get(), item.getZhCN()); }
+        for (LangInfo lang: Data.langs.getAll()) { add(lang.getKey(), lang.getZhCN()); }
     }
 }

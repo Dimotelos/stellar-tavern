@@ -23,7 +23,7 @@ public class CreativeTab {
         "stellar_tab",
         () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .title(Component.translatable("creativetab.stellar_tab"))
+            .title(Component.translatable("creativetab.stellartavern.stellar_tab"))
             .icon(() -> accountBook.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(foodPassTableItem.get());

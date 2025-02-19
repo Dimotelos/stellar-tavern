@@ -14,13 +14,19 @@ public class Data {
     public static final ItemRepository items = new ItemRepository(
         // item.DecorativeItem
         new ItemInfo(auroraGem, "奥罗拉宝石", "Aurora Gem", true),
-        new ItemInfo(auroraCore, "奥罗拉核心", "Aurora Core", true)
+        new ItemInfo(auroraCore, "奥罗拉核心", "Aurora Core", true),
         // item.FunctionItem
+        new ItemInfo(menu, "菜单", "Menu", true),
+        new ItemInfo(accountBook, "账簿", "Account Book", false)
     );
 
-    private static final BlockRepository blocks = new BlockRepository(
+    public static final BlockRepository blocks = new BlockRepository(
         // block.DecorativeBlock
         new BlockInfo(auroraOre, "奥罗拉矿石", "Aurora Ore", true, auroraOreItem.get())
         // block.FunctionBlock
+    );
+
+    public static final LangInfoRepository langs = new LangInfoRepository(
+        new LangInfo("creativetab.stellartavern.stellar_tab", "星辰酒馆物语", "Stellar Tavern")
     );
 }
