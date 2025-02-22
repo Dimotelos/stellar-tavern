@@ -20,5 +20,5 @@ public class Item {
     public static final RegistryObject<net.minecraft.world.item.Item> auroraCore = itemRegister.register("aurora_core", () -> new net.minecraft.world.item.Item(new net.minecraft.world.item.Item.Properties()));
 
     // 注册新物品
-    public static void register(IEventBus eventBus) { itemRegister.register(eventBus); };
+    public static void register(IEventBus eventBus) { itemRegister.register(eventBus); }
 }

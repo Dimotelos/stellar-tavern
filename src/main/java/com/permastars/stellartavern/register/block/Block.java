@@ -50,5 +50,5 @@ public class Block {
     public static final RegistryObject<net.minecraft.world.level.block.Block> deepslateAuroraOre = blockRegister.register("deepslate_aurora_ore", () -> new net.minecraft.world.level.block.Block(BlockBehaviour.Properties.of()));
 
     // 注册新方块
-    public static void register(IEventBus eventBus) { blockRegister.register(eventBus); };
+    public static void register(IEventBus eventBus) { blockRegister.register(eventBus); }
 }

@@ -1,6 +1,7 @@
 package com.permastars.stellartavern.register.datagen.lang;
 
 import com.permastars.stellartavern.StellarTavern;
+import com.permastars.stellartavern.register.datagen.data.BlockInfo;
 import com.permastars.stellartavern.register.datagen.data.Data;
 import com.permastars.stellartavern.register.datagen.data.ItemInfo;
 import com.permastars.stellartavern.register.datagen.data.LangInfo;
@@ -15,7 +16,11 @@ public class zh_cn extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        for (ItemInfo item: Data.items.getAll(0)) { add(item.getValue().get(), item.getZhCN()); }
+        for (BlockInfo block: Data.blocks.getAll()) { add(block.getValue().get(), block.getZhCN()); }
+        for (ItemInfo item: Data.items.getAll()) { add(item.getValue().get(), item.getZhCN()); }
         for (LangInfo lang: Data.langs.getAll()) { add(lang.getKey(), lang.getZhCN()); }
+
+        for (BlockInfo block: Data.starscar_blocks.getAll()) { add(block.getValue().get(), block.getZhCN()); }
+        for (ItemInfo item: Data.starscar_items.getAll()) { add(item.getValue().get(), item.getZhCN()); }
     }
 }

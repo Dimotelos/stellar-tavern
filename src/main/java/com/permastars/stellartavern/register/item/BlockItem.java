@@ -34,5 +34,5 @@ public class BlockItem {
 
 
     // 注册新物品
-    public static void register(IEventBus eventBus) { itemRegister.register(eventBus); };
+    public static void register(IEventBus eventBus) { itemRegister.register(eventBus); }
 }

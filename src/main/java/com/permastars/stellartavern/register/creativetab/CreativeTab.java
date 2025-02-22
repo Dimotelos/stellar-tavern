@@ -26,10 +26,27 @@ public class CreativeTab {
             .title(Component.translatable("creativetab.stellartavern.stellar_tab"))
             .icon(() -> accountBook.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                for (RegistryObject<Block> block : Data.blocks.getAllValues(0)) {
+                for (RegistryObject<Block> block : Data.blocks.getAllValues()) {
                     output.accept(block.get());
                 }
-                for (RegistryObject<Item> item : Data.items.getAllValues(0)) {
+                for (RegistryObject<Item> item : Data.items.getAllValues()) {
+                    output.accept(item.get());
+                }
+            })
+            .build()
+    );
+
+    public static final RegistryObject<CreativeModeTab> stellarStarscarTab = creativeTabRegister.register(
+        "stellar_starscar_tab",
+        () -> CreativeModeTab.builder()
+            .withTabsBefore(CreativeModeTabs.COMBAT)
+            .title(Component.translatable("creativetab.stellartavern.stellar_starscar_tab"))
+            .icon(() -> accountBook.get().getDefaultInstance())
+            .displayItems((parameters, output) -> {
+                for (RegistryObject<Block> block : Data.starscar_blocks.getAllValues()) {
+                    output.accept(block.get());
+                }
+                for (RegistryObject<Item> item : Data.starscar_items.getAllValues()) {
                     output.accept(item.get());
                 }
             })

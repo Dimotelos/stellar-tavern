@@ -1,6 +1,7 @@
 package com.permastars.stellartavern.register.datagen;
 
 import com.permastars.stellartavern.StellarTavern;
+import com.permastars.stellartavern.register.ModelFilter;
 import com.permastars.stellartavern.register.datagen.data.Data;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -23,7 +24,7 @@ public class ItemModelGen extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        for (RegistryObject<Item> item : Data.items.getAllValues(1)) {
+        for (RegistryObject<Item> item : Data.items.getAllValues(ModelFilter.DEFAULT_MODEL)) {
             itemGeneratedModel(item);
         }
     }
