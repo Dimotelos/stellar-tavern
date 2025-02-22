@@ -1,0 +1,50 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"particle": "block/oak_log",
+		"stripped_log": "block/stripped_oak_log",
+		"planks": "block/oak_planks",
+		"stripped_log_top": "block/stripped_oak_log_top"
+	},
+	"elements": [
+		{
+			"name": "桌面",
+			"from": [0, 15, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 15, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 1], "texture": "#stripped_log"},
+				"east": {"uv": [0, 0, 16, 1], "texture": "#stripped_log"},
+				"south": {"uv": [0, 0, 16, 1], "texture": "#stripped_log"},
+				"west": {"uv": [0, 0, 16, 1], "texture": "#stripped_log"},
+				"up": {"uv": [0, 1, 16, 15], "texture": "#planks"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#stripped_log_top"}
+			}
+		}
+	],
+	"display": {
+		"firstperson_righthand": {
+			"translation": [0, -0.25, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, -0.5, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"head": {
+			"rotation": [0, 0, 180],
+			"translation": [0, 14.25, 0]
+		}
+	},
+	"groups": [
+		0,
+		{
+			"name": "桌腿",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": []
+		}
+	],
+	"author": "LDxiaodi"
+}
