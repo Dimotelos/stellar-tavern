@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Objects;
 
 import static com.permastars.stellartavern.register.block.DecorativeBlock.*;
-import static com.permastars.stellartavern.register.block.FunctionBlock.*;
+import static com.permastars.stellartavern.register.block.Block.*;
 
 
 //public class BlockModelGen extends BlockModelProvider {

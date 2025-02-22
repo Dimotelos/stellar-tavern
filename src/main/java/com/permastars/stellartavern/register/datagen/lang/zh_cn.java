@@ -7,7 +7,6 @@ import com.permastars.stellartavern.register.datagen.data.LangInfo;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
-import static com.permastars.stellartavern.register.item.DecorativeItem.auroraGem;
 
 public class zh_cn extends LanguageProvider {
     public zh_cn(PackOutput output, String locale) {

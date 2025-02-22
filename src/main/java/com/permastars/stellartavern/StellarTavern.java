@@ -13,12 +13,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
-import com.permastars.stellartavern.register.block.FunctionBlock;
-import com.permastars.stellartavern.register.block.DecorativeBlock;
-import com.permastars.stellartavern.register.blockitem.FunctionBlockItem;
-import com.permastars.stellartavern.register.blockitem.DecorativeBlockItem;
-import com.permastars.stellartavern.register.item.FunctionItem;
-import com.permastars.stellartavern.register.item.DecorativeItem;
+import com.permastars.stellartavern.register.block.Block;
+import com.permastars.stellartavern.register.item.BlockItem;
+import com.permastars.stellartavern.register.item.Item;
 
 // 这里的值应与 META-INF/mods.toml 文件中的条目匹配
 @Mod(StellarTavern.modid)
@@ -37,12 +34,9 @@ public class StellarTavern
         modEventBus.addListener(this::commonSetup);
 
         // 注册各种方块和物品
-        DecorativeBlock.register(modEventBus);
-        FunctionBlock.register(modEventBus);
-        DecorativeBlockItem.register(modEventBus);
-        FunctionBlockItem.register(modEventBus);
-        DecorativeItem.register(modEventBus);
-        FunctionItem.register(modEventBus);
+        Block.register(modEventBus);
+        BlockItem.register(modEventBus);
+        Item.register(modEventBus);
 
         // 注册Stellar Tavern独属的创造物品栏
         CreativeTab.register(modEventBus);
