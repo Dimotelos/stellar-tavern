@@ -29,3 +29,5 @@ repo
 src/main/resources/assets/minecraft
 # generated
 src/generated
+# 用于快速查看输出的快捷方式
+build_result.lnk

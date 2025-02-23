@@ -1,15 +1,17 @@
 package com.permastars.stellartavern.register.datagen.data;
 
-import com.permastars.stellartavern.register.BlockItemModelType;
+import com.permastars.stellartavern.register.datagen.type.BlockItemModelType;
+import com.permastars.stellartavern.register.datagen.type.BlockModelType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
-import com.permastars.stellartavern.register.ModelFilter;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.List;
+import java.util.stream.Stream;
+
 
 public class BlockRepository {
     private final Map<RegistryObject<Block>, BlockInfo> blocks = new HashMap<>();
@@ -17,54 +19,60 @@ public class BlockRepository {
     // 构造函数
     public BlockRepository(BlockInfo... blockInfos) {
         for (BlockInfo block : blockInfos) {
-            blocks.put(block.value(), block);
+            blocks.put(block.block(), block);
         }
     }
 
-    // 根据 value 获取项
-    public BlockInfo get(RegistryObject<Block> value) {
-        return blocks.get(value);
+    // 根据 block 获取项
+    public BlockInfo get(RegistryObject<Block> block) {
+        return blocks.get(block);
     }
 
     // 返回符合条件的所有 BlockInfo 列表
-    public List<BlockInfo> getAll(ModelFilter filter, BlockItemModelType blockItemModelType) {
-        return filterBlocks(filter, blockItemModelType)
+    public List<BlockInfo> getAll(BlockModelType blockModelType, BlockItemModelType blockItemModelType) {
+        return filterBlocks(blockModelType, blockItemModelType)
             .collect(Collectors.toList());
+    }
+    // with_default
+    public List<BlockInfo> getAll(BlockModelType blockModelType) {
+        return getAll(blockModelType, null);
+    }
+    public List<BlockInfo> getAll() {
+        return getAll(null, null);
     }
 
     // 返回符合条件的所有 Block 注册值列表
-    public List<RegistryObject<Block>> getAllValues(ModelFilter filter, BlockItemModelType blockItemModelType) {
-        return filterBlocks(filter, blockItemModelType)
-            .map(BlockInfo::value)
+    public List<RegistryObject<Block>> getAllValues(BlockModelType blockModelType, BlockItemModelType blockItemModelType) {
+        return filterBlocks(blockModelType, blockItemModelType)
+            .map(BlockInfo::block)
             .collect(Collectors.toList());
+    }
+    // with_default
+    public List<RegistryObject<Block>> getAllValues(BlockModelType blockModelType) {
+        return getAllValues(blockModelType, null);
+    }
+    public List<RegistryObject<Block>> getAllValues() {
+        return getAllValues(null, null);
     }
 
     // 返回符合条件的所有 BlockItem 注册值列表
-    public List<RegistryObject<Item>> getAllBlockItemValues(ModelFilter filter, BlockItemModelType blockItemModelType) {
-        return filterBlocks(filter, blockItemModelType)
-            .map(BlockInfo::getBlockItem) // 假设 BlockInfo 中有 getBlockItem 方法
+    public List<RegistryObject<Item>> getAllBlockItemValues(BlockModelType blockModelType, BlockItemModelType blockItemModelType) {
+        return filterBlocks(blockModelType, blockItemModelType)
+            .map(BlockInfo::getBlockItem)
             .collect(Collectors.toList());
     }
-
-    // 为 filter 和 blockItemModelType 设置默认值的方法
-    public List<BlockInfo> getAll() {
-        return getAll(ModelFilter.ALL, BlockItemModelType.DEFAULT_BLOCK_ITEM_MODEL);
+    // with_default
+    public List<RegistryObject<Item>> getAllBlockItemValues(BlockModelType blockModelType) {
+        return getAllBlockItemValues(blockModelType, null);
     }
-
-    public List<RegistryObject<Block>> getAllValues() {
-        return getAllValues(ModelFilter.ALL, BlockItemModelType.DEFAULT_BLOCK_ITEM_MODEL);
-    }
-
     public List<RegistryObject<Item>> getAllBlockItemValues() {
-        return getAllBlockItemValues(ModelFilter.ALL, BlockItemModelType.DEFAULT_BLOCK_ITEM_MODEL);
+        return getAllBlockItemValues(null, null);
     }
 
     // 抽象出的高复用代码：过滤 BlockInfo 流
-    private java.util.stream.Stream<BlockInfo> filterBlocks(ModelFilter filter, BlockItemModelType blockItemModelType) {
+    private Stream<BlockInfo> filterBlocks(BlockModelType blockModelType, BlockItemModelType blockItemModelType) {
         return blocks.values().stream()
-            .filter(block -> (filter == ModelFilter.ALL ||
-                (filter == ModelFilter.DEFAULT_MODEL && block.isDefaultModel()) ||
-                (filter == ModelFilter.CUSTOM_MODEL && !block.isDefaultModel())))
+            .filter(block -> blockModelType == null || block.getBlockModelType() == blockModelType)
             .filter(block -> blockItemModelType == null || block.getBlockItemModelType() == blockItemModelType);
     }
 }

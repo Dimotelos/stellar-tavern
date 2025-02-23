@@ -17,7 +17,7 @@ import com.permastars.stellartavern.register.block.Block;
 import com.permastars.stellartavern.register.item.BlockItem;
 import com.permastars.stellartavern.register.item.Item;
 
-// 这里的值应与 META-INF/mods.toml 文件中的条目匹配
+
 @Mod(StellarTavern.modid)
 public class StellarTavern
 {
@@ -43,9 +43,6 @@ public class StellarTavern
 
         // 注册我们自己以接收服务器和其他游戏事件
         MinecraftForge.EVENT_BUS.register(this);
-
-//        // 将物品注册到创造模式标签页
-//        modEventBus.addListener(this::addCreative);
 
         // 注册我们的 mod 的 ForgeConfigSpec，以便 Forge 可以为我们创建和加载配置文件
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);

@@ -16,11 +16,11 @@ public class en_us extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        for (BlockInfo block: Data.blocks.getAll()) { add(block.getValue().get(), block.getEnUS()); }
-        for (ItemInfo item: Data.items.getAll()) { add(item.getValue().get(), item.getEnUS()); }
+        for (BlockInfo block: Data.blocks.getAll()) { add(block.getBlock().get(), block.getEnUS()); }
+        for (ItemInfo item: Data.items.getAll()) { add(item.getItem().get(), item.getEnUS()); }
         for (LangInfo lang: Data.langs.getAll()) { add(lang.getKey(), lang.getEnUS()); }
 
-        for (BlockInfo block: Data.starscar_blocks.getAll()) { add(block.getValue().get(), block.getEnUS()); }
-        for (ItemInfo item: Data.starscar_items.getAll()) { add(item.getValue().get(), item.getEnUS()); }
+        for (BlockInfo block: Data.starscar_blocks.getAll()) { add(block.getBlock().get(), block.getEnUS()); }
+        for (ItemInfo item: Data.starscar_items.getAll()) { add(item.getItem().get(), item.getEnUS()); }
     }
 }

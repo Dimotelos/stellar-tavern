@@ -24,6 +24,8 @@ public class DataGenerators {
         ExistingFileHelper helper = event.getExistingFileHelper();
         // Gen: item without models
         generator.addProvider(event.includeClient(), new ItemModelGen(output, helper));
+        // Gen: block simple
+        generator.addProvider(event.includeClient(), new BlockModelGen(output, helper));
         // Gen: lang
         generator.addProvider(event.includeClient(), new zh_cn(output, "zh_cn"));
         generator.addProvider(event.includeClient(), new en_us(output, "en_us"));
