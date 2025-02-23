@@ -7,7 +7,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static com.permastars.stellartavern.StellarTavern.modid;
 
-
 public class Item {
 
     public static final DeferredRegister<net.minecraft.world.item.Item> itemRegister = DeferredRegister.create(ForgeRegistries.ITEMS, modid);

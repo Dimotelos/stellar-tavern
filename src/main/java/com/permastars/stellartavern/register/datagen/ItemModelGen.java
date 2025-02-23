@@ -13,7 +13,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Objects;
 
-
 public class ItemModelGen extends ItemModelProvider {
     public static final String generatedItem = "item/generated";
     public static final String handheldItem = "item/handheld";

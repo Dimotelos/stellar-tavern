@@ -1,6 +1,5 @@
 package com.permastars.stellartavern.register.datagen;
 
-
 import com.permastars.stellartavern.StellarTavern;
 import com.permastars.stellartavern.register.datagen.data.Data;
 import com.permastars.stellartavern.register.datagen.type.BlockModelType;
@@ -9,7 +8,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
-
 
 public class BlockModelGen extends BlockStateProvider {
 

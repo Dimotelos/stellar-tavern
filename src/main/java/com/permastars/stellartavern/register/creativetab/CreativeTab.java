@@ -15,7 +15,6 @@ import static com.permastars.stellartavern.StellarTavern.modid;
 
 import static com.permastars.stellartavern.register.item.Item.*;
 
-
 public class CreativeTab {
     public static final DeferredRegister<CreativeModeTab> creativeTabRegister = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, modid);
 

@@ -8,7 +8,6 @@ import com.permastars.stellartavern.register.datagen.data.LangInfo;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
-
 public class en_us extends LanguageProvider {
     public en_us(PackOutput output, String locale) {
         super(output, StellarTavern.modid, locale);

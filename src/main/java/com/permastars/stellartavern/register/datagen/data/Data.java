@@ -8,7 +8,6 @@ import static com.permastars.stellartavern.register.block.Block.*;
 import static com.permastars.stellartavern.register.item.BlockItem.*;
 import static com.permastars.stellartavern.register.item.Item.*;
 
-
 public class Data {
 
     // 物品数据

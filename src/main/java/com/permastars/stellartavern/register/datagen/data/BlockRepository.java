@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 import java.util.List;
 import java.util.stream.Stream;
 
-
 public class BlockRepository {
     private final Map<RegistryObject<Block>, BlockInfo> blocks = new HashMap<>();
 

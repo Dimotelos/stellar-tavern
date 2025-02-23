@@ -17,7 +17,6 @@ import com.permastars.stellartavern.register.block.Block;
 import com.permastars.stellartavern.register.item.BlockItem;
 import com.permastars.stellartavern.register.item.Item;
 
-
 @Mod(StellarTavern.modid)
 public class StellarTavern
 {

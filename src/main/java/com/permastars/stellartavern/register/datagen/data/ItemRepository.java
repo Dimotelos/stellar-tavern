@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
 public class ItemRepository {
     private final Map<RegistryObject<Item>, ItemInfo> items = new HashMap<>();
 

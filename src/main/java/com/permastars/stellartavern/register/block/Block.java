@@ -9,7 +9,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static com.permastars.stellartavern.StellarTavern.modid;
 
-
 public class Block {
 
     private static final DeferredRegister<net.minecraft.world.level.block.Block> blockRegister = DeferredRegister.create(ForgeRegistries.BLOCKS, modid);

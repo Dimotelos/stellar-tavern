@@ -4,7 +4,6 @@ import com.permastars.stellartavern.register.datagen.type.ItemModelType;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.RegistryObject;
 
-// 表示单个项的类
 public record ItemInfo(
     RegistryObject<Item> item,
     String zhCn,

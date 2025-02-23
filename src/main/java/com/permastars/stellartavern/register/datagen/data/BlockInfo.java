@@ -6,7 +6,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 
-
 public record BlockInfo(
     RegistryObject<Block> block,           // Block 的注册对象
     String zhCn,                           // 中文名称

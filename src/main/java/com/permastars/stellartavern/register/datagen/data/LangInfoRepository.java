@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 
-
 public class LangInfoRepository {
     private final Map<String, LangInfo> langs = new HashMap<>();
 

@@ -8,7 +8,6 @@ import com.permastars.stellartavern.register.datagen.data.LangInfo;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 
-
 public class zh_cn extends LanguageProvider {
     public zh_cn(PackOutput output, String locale) {
         super(output, StellarTavern.modid, locale);
