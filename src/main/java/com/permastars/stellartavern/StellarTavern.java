@@ -1,7 +1,7 @@
 package com.permastars.stellartavern;
 
 import com.mojang.logging.LogUtils;
-import com.permastars.stellartavern.register.creativetab.CreativeTab;
+import com.permastars.stellartavern.register.CreativeTab;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,9 +13,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
-import com.permastars.stellartavern.register.block.Block;
-import com.permastars.stellartavern.register.item.BlockItem;
-import com.permastars.stellartavern.register.item.Item;
+import com.permastars.stellartavern.register.ModBlock;
+import com.permastars.stellartavern.register.ModBlockItem;
+import com.permastars.stellartavern.register.ModItem;
 
 @Mod(StellarTavern.modid)
 public class StellarTavern
@@ -33,9 +33,9 @@ public class StellarTavern
         modEventBus.addListener(this::commonSetup);
 
         // 注册各种方块和物品
-        Block.register(modEventBus);
-        BlockItem.register(modEventBus);
-        Item.register(modEventBus);
+        ModBlock.register(modEventBus);
+        ModBlockItem.register(modEventBus);
+        ModItem.register(modEventBus);
 
         // 注册Stellar Tavern独属的创造物品栏
         CreativeTab.register(modEventBus);

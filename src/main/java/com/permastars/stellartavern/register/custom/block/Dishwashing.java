@@ -1,4 +1,4 @@
-package com.permastars.stellartavern.register.block.custom;
+package com.permastars.stellartavern.register.custom.block;
 
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;

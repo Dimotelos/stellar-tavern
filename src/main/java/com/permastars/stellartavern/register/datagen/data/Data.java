@@ -4,9 +4,9 @@ import com.permastars.stellartavern.register.datagen.type.BlockItemModelType;
 import com.permastars.stellartavern.register.datagen.type.BlockModelType;
 import com.permastars.stellartavern.register.datagen.type.ItemModelType;
 
-import static com.permastars.stellartavern.register.block.Block.*;
-import static com.permastars.stellartavern.register.item.BlockItem.*;
-import static com.permastars.stellartavern.register.item.Item.*;
+import static com.permastars.stellartavern.register.ModBlock.*;
+import static com.permastars.stellartavern.register.ModBlockItem.*;
+import static com.permastars.stellartavern.register.ModItem.*;
 
 public class Data {
 

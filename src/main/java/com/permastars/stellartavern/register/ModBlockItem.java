@@ -1,4 +1,4 @@
-package com.permastars.stellartavern.register.item;
+package com.permastars.stellartavern.register;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -6,10 +6,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.permastars.stellartavern.register.block.Block.*;
+import static com.permastars.stellartavern.register.ModBlock.*;
 import static com.permastars.stellartavern.StellarTavern.modid;
 
-public class BlockItem {
+public class ModBlockItem {
 
     public static final DeferredRegister<Item> itemRegister = DeferredRegister.create(ForgeRegistries.ITEMS, modid);
 

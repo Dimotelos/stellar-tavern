@@ -1,4 +1,4 @@
-package com.permastars.stellartavern.register.block.custom;
+package com.permastars.stellartavern.register.custom.block;
 
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
@@ -12,11 +12,11 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 
 import javax.annotation.Nullable;
 
-public class StarscarDishwashing extends HorizontalDirectionalBlock {
+public class FoodPassTable extends HorizontalDirectionalBlock {
 
     public static final DirectionProperty facing = BlockStateProperties.HORIZONTAL_FACING;
 
-    public StarscarDishwashing(Properties properties) {
+    public FoodPassTable(Properties properties) {
         super(properties);
     }
 

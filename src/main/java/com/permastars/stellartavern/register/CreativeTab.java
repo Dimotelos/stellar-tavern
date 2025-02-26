@@ -1,4 +1,4 @@
-package com.permastars.stellartavern.register.creativetab;
+package com.permastars.stellartavern.register;
 
 import com.permastars.stellartavern.register.datagen.data.Data;
 import net.minecraft.core.registries.Registries;
@@ -13,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static com.permastars.stellartavern.StellarTavern.modid;
 
-import static com.permastars.stellartavern.register.item.Item.*;
+import static com.permastars.stellartavern.register.ModItem.*;
 
 public class CreativeTab {
     public static final DeferredRegister<CreativeModeTab> creativeTabRegister = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, modid);
