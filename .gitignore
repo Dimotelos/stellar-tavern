@@ -29,3 +29,7 @@ repo
 src/main/resources/assets/minecraft
 # generated
 src/generated
+
+# DS_Store屏蔽
+.DS_Store
+   */**/.DS_Store
