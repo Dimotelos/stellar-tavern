@@ -10,7 +10,7 @@ import net.minecraftforge.common.data.LanguageProvider;
 
 public class zh_cn extends LanguageProvider {
     public zh_cn(PackOutput output, String locale) {
-        super(output, StellarTavern.modid, locale);
+        super(output, StellarTavern.MODID, locale);
     }
 
     @Override

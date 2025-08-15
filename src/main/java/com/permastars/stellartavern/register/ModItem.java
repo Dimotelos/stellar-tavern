@@ -6,11 +6,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.item.Item;
 
-import static com.permastars.stellartavern.StellarTavern.modid;
+import static com.permastars.stellartavern.StellarTavern.MODID;
 
 public class ModItem {
 
-    public static final DeferredRegister<Item> itemRegister = DeferredRegister.create(ForgeRegistries.ITEMS, modid);
+    public static final DeferredRegister<Item> itemRegister = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
     // 有交互物品
     public static final RegistryObject<Item> accountBook = itemRegister.register("account_book", () -> new Item(new Item.Properties()));

@@ -7,11 +7,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import static com.permastars.stellartavern.register.ModBlock.*;
-import static com.permastars.stellartavern.StellarTavern.modid;
+import static com.permastars.stellartavern.StellarTavern.MODID;
 
 public class ModBlockItem {
 
-    public static final DeferredRegister<Item> itemRegister = DeferredRegister.create(ForgeRegistries.ITEMS, modid);
+    public static final DeferredRegister<Item> itemRegister = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
     // 有交互方块物品
     public static final RegistryObject<Item> foodPassTableItem = itemRegister.register("food_pass_table", () -> new net.minecraft.world.item.BlockItem(foodPassTable.get(), new Item.Properties()));

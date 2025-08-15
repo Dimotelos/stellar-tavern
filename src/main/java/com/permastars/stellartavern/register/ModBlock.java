@@ -8,11 +8,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.level.block.Block;
 
-import static com.permastars.stellartavern.StellarTavern.modid;
+import static com.permastars.stellartavern.StellarTavern.MODID;
 
 public class ModBlock {
 
-    private static final DeferredRegister<Block> blockRegister = DeferredRegister.create(ForgeRegistries.BLOCKS, modid);
+    private static final DeferredRegister<Block> blockRegister = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
 
     // 有交互方块
     public static final RegistryObject<Block> foodPassTable = blockRegister.register(
@@ -23,14 +23,17 @@ public class ModBlock {
     public static final RegistryObject<Block> dishwashing = blockRegister.register(
         "dishwashing", () -> new Dishwashing(
             BlockBehaviour.Properties.of()
+                .noOcclusion()
         )); // 洗碗台
     public static final RegistryObject<Block> starscarDishwashing = blockRegister.register(
         "starscar_dishwashing", () -> new StarscarDishwashing(
             BlockBehaviour.Properties.of()
+                .noOcclusion()
         )); // 星痕洗碗台
     public static final RegistryObject<Block> cashier = blockRegister.register(
         "cashier", () -> new Cashier(
             BlockBehaviour.Properties.of()
+                .noOcclusion()
         )); // 收银机
     public static final RegistryObject<Block> tray = blockRegister.register("tray", () -> new Block(BlockBehaviour.Properties.of())); // 托盘
 
@@ -41,7 +44,9 @@ public class ModBlock {
     public static final RegistryObject<Block> pubChair = blockRegister.register("pub_chair", () -> new Block(BlockBehaviour.Properties.of()));
     public static final RegistryObject<Block> sofa = blockRegister.register("sofa", () -> new Block(BlockBehaviour.Properties.of()));
     public static final RegistryObject<Block> counterTable = blockRegister.register(
-        "counter_table", () -> new CounterTable(BlockBehaviour.Properties.of()
+        "counter_table", () -> new CounterTable(
+            BlockBehaviour.Properties.of()
+                .noOcclusion()
         )); // 台面桌
     public static final RegistryObject<Block> faucet = blockRegister.register("faucet", () -> new Block(BlockBehaviour.Properties.of()));
 

@@ -10,7 +10,7 @@ import net.minecraftforge.common.data.LanguageProvider;
 
 public class en_us extends LanguageProvider {
     public en_us(PackOutput output, String locale) {
-        super(output, StellarTavern.modid, locale);
+        super(output, StellarTavern.MODID, locale);
     }
 
     @Override

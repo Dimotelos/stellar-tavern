@@ -17,13 +17,13 @@ import com.permastars.stellartavern.register.ModBlock;
 import com.permastars.stellartavern.register.ModBlockItem;
 import com.permastars.stellartavern.register.ModItem;
 
-@Mod(StellarTavern.modid)
+@Mod(StellarTavern.MODID)
 public class StellarTavern
 {
     // 在一个公共地方定义 mod id，以便所有内容都可以引用
-    public static final String modid = "stellartavern";
+    public static final String MODID = "stellartavern";
     // 直接引用一个 slf4j 日志记录器
-    private static final Logger logger = LogUtils.getLogger();
+    private static final Logger LOGGER = LogUtils.getLogger();
 
     public StellarTavern()
     {
@@ -50,13 +50,13 @@ public class StellarTavern
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         // 一些通用的设置代码
-        logger.info("HELLO FROM COMMON SETUP");
+        LOGGER.info("HELLO FROM COMMON SETUP");
 
         if (Config.logDirtBlock)
-            logger.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+            LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
 
-        logger.info("{}{}", Config.magicNumberIntroduction, Config.magicNumber);
+        LOGGER.info("{}{}", Config.magicNumberIntroduction, Config.magicNumber);
 
-        Config.items.forEach((item) -> logger.info("ITEM >> {}", item.toString()));
+        Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 }

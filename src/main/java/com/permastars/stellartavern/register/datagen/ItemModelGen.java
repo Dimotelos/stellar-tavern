@@ -18,7 +18,7 @@ public class ItemModelGen extends ItemModelProvider {
     public static final String handheldItem = "item/handheld";
 
     public ItemModelGen(PackOutput output, ExistingFileHelper helper) {
-        super(output, StellarTavern.modid, helper);
+        super(output, StellarTavern.MODID, helper);
     }
 
     @Override
@@ -31,6 +31,6 @@ public class ItemModelGen extends ItemModelProvider {
     public void itemGeneratedModel(RegistryObject<Item> item) {
         var itemName = Objects.requireNonNull(ForgeRegistries.ITEMS.getKey(item.get())).getPath();
         withExistingParent(itemName, generatedItem)
-            .texture("layer0", new ResourceLocation(StellarTavern.modid, "item/" + itemName));
+            .texture("layer0", new ResourceLocation(StellarTavern.MODID, "item/" + itemName));
     }
 }

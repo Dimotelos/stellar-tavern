@@ -1,6 +1,14 @@
 package com.permastars.stellartavern.register.custom.block;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
@@ -9,6 +17,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.BlockHitResult;
 
 import javax.annotation.Nullable;
 
@@ -41,12 +50,16 @@ public class FoodPassTable extends HorizontalDirectionalBlock {
         builder.add(facing);
     }
 
-    //    @Override
-//    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-//        player.sendSystemMessage(Component.literal("此方块被点击了"));
-//        return super.use(state, level, pos, player, hand, hit);
-//    }
-//
+    @Override
+    public InteractionResult use(BlockState state, Level level, BlockPos blockPos, Player player,
+                                 InteractionHand hand, BlockHitResult blockHitResult) {
+        if (!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
+            player.sendSystemMessage(Component.literal("Right Clicked this!"));
+        }
+
+        return super.use(state, level, blockPos, player, hand, blockHitResult);
+    }
+
 //    @Override
 //    public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
 //        super.stepOn(level, pos, state, entity);

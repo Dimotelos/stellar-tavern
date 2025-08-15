@@ -11,12 +11,12 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.permastars.stellartavern.StellarTavern.modid;
+import static com.permastars.stellartavern.StellarTavern.MODID;
 
 import static com.permastars.stellartavern.register.ModItem.*;
 
 public class CreativeTab {
-    public static final DeferredRegister<CreativeModeTab> creativeTabRegister = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, modid);
+    public static final DeferredRegister<CreativeModeTab> creativeTabRegister = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     public static final RegistryObject<CreativeModeTab> stellarTab = creativeTabRegister.register(
         "stellar_tab",

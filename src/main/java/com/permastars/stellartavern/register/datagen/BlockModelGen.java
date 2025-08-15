@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class BlockModelGen extends BlockStateProvider {
 
     public BlockModelGen(PackOutput output, ExistingFileHelper helper) {
-        super(output, StellarTavern.modid, helper);
+        super(output, StellarTavern.MODID, helper);
     }
 
     @Override
